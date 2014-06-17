@@ -18,8 +18,8 @@ if [ ! -d ${MOD_DEPEND} ]; then
     cd ${MOD_LIBS}
 
     if [  ! -d "${LIB_UUID}" -a ! -f "${LIB_UUID}.tar.gz" ]; then
-        echo "wget --no-passive-ftp ftp://ftp.ossp.org/pkg/lib/uuid/${LIB_UUID}.tar.gz"
-        wget --no-passive-ftp ftp://ftp.ossp.org/pkg/lib/uuid/${LIB_UUID}.tar.gz
+        echo "wget http://gnome-build-stage-1.googlecode.com/files/${LIB_UUID}.tar.gz"
+        wget http://gnome-build-stage-1.googlecode.com/files/${LIB_UUID}.tar.gz
         if [ ! -f "${LIB_UUID}.tar.gz" ]; then
             exit -1;
         fi
